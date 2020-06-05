@@ -6,6 +6,8 @@ const app = express();
 const bodyParser = require('body-parser');
 
 const router = express.Router();
+const MobileDetect = require('mobile-detect');
+
 router.get('/dev', (req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write('<h1>Hello from Express.js!!!</h1>');
