@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
   res.end();
 });
 
-app.get('/tracker', function (req, res) {
+router.get('/tracker', function (req, res) {
 
   md = new MobileDetect(req.headers['user-agent']);
   let browserType = "desktop";
