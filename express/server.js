@@ -32,7 +32,7 @@ router.get('/tracker', function (req, res) {
   }
   // res.send('<img src="' + canvas.toDataURL() + '" />');
   res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.write(JSON.stringify(params);
+  res.write(JSON.stringify(params));
   res.end();
 });
 
