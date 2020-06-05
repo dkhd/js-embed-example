@@ -31,7 +31,10 @@ router.get('/', function (req, res) {
     host: req.headers,
   }
   // res.send('<img src="' + canvas.toDataURL() + '" />');
-  res.send(params);
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.write(params);
+  res.end();
+  // res.send(params);
 });
 
 app.use(bodyParser.json());
