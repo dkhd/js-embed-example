@@ -1,24 +1,32 @@
 {
-  "name": "js-embed-example",
-  "version": "1.0.0",
-  "description": "js embedding example",
-  "main": "index.js",
+  "name": "netlify-express",
+  "version": "0.0.1",
+  "description": "Example of how to deploy a Express.js Netlify app.",
+  "main": "functions/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "build": "netlify-lambda build express",
+    "start": "nodemon server-local.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dkhd/js-embed-example.git"
+    "url": "git+https://github.com/neverendingqs/netlify-express.git"
   },
-  "author": "@dkhd",
-  "license": "ISC",
+  "keywords": [
+    "netlify",
+    "express.js"
+  ],
+  "author": "neverendingqs",
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/dkhd/js-embed-example/issues"
+    "url": "https://github.com/neverendingqs/netlify-express/issues"
   },
-  "homepage": "https://github.com/dkhd/js-embed-example#readme",
-  "dependencies": {
+  "homepage": "https://github.com/neverendingqs/netlify-express#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mobile-detect": "^1.4.4"
+    "netlify-lambda": "^1.6.3",
+    "nodemon": "^1.19.2",
+    "serverless-http": "^2.3.0"
   }
 }
