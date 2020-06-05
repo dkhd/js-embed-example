@@ -31,7 +31,9 @@ router.get('/tracker', function (req, res) {
     host: req.headers,
   }
   // res.send('<img src="' + canvas.toDataURL() + '" />');
-  res.send(params);
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write(JSON.stringify(params));
+  res.end();
 });
 
 app.use(bodyParser.json());
