@@ -6,13 +6,13 @@ const app = express();
 const bodyParser = require('body-parser');
 
 const router = express.Router();
-// router.get('/', (req, res) => {
-//   res.writeHead(200, { 'Content-Type': 'text/html' });
-//   res.write('<h1>Hello from Express.js!</h1>');
-//   res.end();
-// });
+router.get('/', (req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.write('<h1>Hello from Express.js!!!</h1>');
+  res.end();
+});
 
-router.get('/', function (req, res) {
+router.get('/tracker', function (req, res) {
 
   md = new MobileDetect(req.headers['user-agent']);
   let browserType = "desktop";
@@ -31,10 +31,7 @@ router.get('/', function (req, res) {
     host: req.headers,
   }
   // res.send('<img src="' + canvas.toDataURL() + '" />');
-  res.writeHead(200, { 'Content-Type': 'application/json' });
-  res.write(params);
-  res.end();
-  // res.send(params);
+  res.send(params);
 });
 
 app.use(bodyParser.json());
