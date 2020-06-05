@@ -1,0 +1,24 @@
+{
+  "name": "js-embed-example",
+  "version": "1.0.0",
+  "description": "js embedding example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkhd/js-embed-example.git"
+  },
+  "author": "@dkhd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkhd/js-embed-example/issues"
+  },
+  "homepage": "https://github.com/dkhd/js-embed-example#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mobile-detect": "^1.4.4"
+  }
+}
